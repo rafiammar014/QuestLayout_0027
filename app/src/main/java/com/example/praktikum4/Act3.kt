@@ -3,6 +3,7 @@ package com.example.praktikum4
 import android.R.attr.text
 import androidx.benchmark.traceprocessor.Row
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -81,11 +82,13 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-    )
-
-
-
-
-
+    ){
+        Text(
+            stringResource(id = R.string.copy),
+            modifier = modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 50.dp)
+        )
+        }
     }
 }
