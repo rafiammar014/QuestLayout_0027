@@ -1,7 +1,5 @@
 package com.example.praktikum4
 
-import android.R.attr.text
-import androidx.benchmark.traceprocessor.Row
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,9 +8,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.material3.AlertDialogDefaults.containerColor
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,17 +28,18 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun ActivitasPertama(modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier.padding(top = 100.dp)
+        modifier = Modifier
+            .padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            stringResource(id = R.string.prodi)
+            text = stringResource(id = R.string.prodi),
             fontSize = 35.sp,
             fontWeight = FontWeight.Bold,
         )
         Text(
-            stringResource(id = R.string.univ),
+            text = stringResource(id = R.string.univ),
             fontSize = 22.sp,
         )
         Spacer(modifier = Modifier.height(25.dp))
@@ -47,48 +47,48 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
         Card(
             modifier = Modifier
                 .fillMaxSize(fraction = 1f)
-                .padding(12.dp)
+                .padding(12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = colorResource(id = R.color.car_0_bg))
-        )
-
-        {
-        Row() {
-            val gambar = painterResource(id = R.drawable.logo)
-            Image(
-                painter = gambar
-                contentDescription = null
-                modifier = Modifier.size(100.dp).padding(5.dp)
+                containerColor = colorResource(id = R.color.car_0_bg)
             )
-            Spacer(modifier = Modifier.width(30.dp))
-            Column() {
-                Text(
-                    stringResource("Rafi Ammar")
-                    fontSize = 30.sp,
-                    fontFamily = FontFamily.Cursive,
-                    color = Color.white,
-                    modifier = modifier.padding(top = 15.dp)
+        ) {
+            Row {
+                val gambar = painterResource(id = R.drawable.logo)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
                 )
-                Text(
-                    stringResource("Tamantirto, Bantul")
-                    fontSize = 20.sp,
-                    color = Color.Yellow,
-                    modifier = modifier.padding(top = 10.dp)
-                )
+                Spacer(modifier = Modifier.width(30.dp))
+                Column {
+                    Text(
+                        text = "Rafi Ammar",
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        text = "Tamantirto, Bantul",
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = modifier.padding(top = 10.dp)
+                    )
+                }
             }
         }
-    }
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-    ){
-        Text(
-            stringResource(id = R.string.copy),
-            modifier = modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = 50.dp)
-        )
+        Box(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            Text(
+                text = stringResource(id = R.string.copy),
+                modifier = modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
         }
     }
 }
