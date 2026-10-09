@@ -74,9 +74,15 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                     color = Color.Yellow,
                     modifier = modifier.padding(top = 10.dp)
                 )
-                }
             }
         }
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    )
+
 
 
 
