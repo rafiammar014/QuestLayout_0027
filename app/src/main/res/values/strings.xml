@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Praktikum4</string>
+    <string name="prodi">Teknologi Informasi</string>
+    <string name="univ">Universitas Muhammadiyah Yogyakarta</string>
+    <string name="nama">Rafi Ammar Dinata</string>
+    <string name="alamat">Tamantirto, Bantul</string>
+    <string name="copy">Copyright, 2026</string>
 </resources>
