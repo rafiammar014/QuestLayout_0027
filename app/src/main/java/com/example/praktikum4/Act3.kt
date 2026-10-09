@@ -68,11 +68,18 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                     color = Color.white,
                     modifier = modifier.padding(top = 15.dp)
                 )
-            }
-
-
+                Text(
+                    stringResource("Tamantirto, Bantul")
+                    fontSize = 20.sp,
+                    color = Color.Yellow,
+                    modifier = modifier.padding(top = 10.dp)
+                )
+                }
             }
         }
+
+
+
 
     }
 }
